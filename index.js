@@ -3,12 +3,11 @@ const input = document.getElementById('title')
 
 submitButton.addEventListener('click', () => {
     const value = input.value
-    if(value === '') {
-        return
+        if(value === '') {
+        'return'
     }
     const element = document.createElement('div')
     element.classList.add("list")
-    // document.getElementsByClassName("List")[0].value
 
     const title = document.createElement("p")
     title.classList.add("title")
@@ -22,22 +21,15 @@ submitButton.addEventListener('click', () => {
     document.body.appendChild(element)
     
     title.addEventListener('click', () => {
-        console.log(title.classList)
         if(title.style['textDecoration'] === 'line-through'){
             title.style['textDecoration'] = ''
         }else{
             title.style['textDecoration'] = 'line-through'
         }
-        // title.style['textDecoration'] = 'line-through'
-
     })
-
     image.addEventListener('click', () => {
         element.remove()
     })
-
-    console.log(element)
-
     document.body.appendChild(element)
     input.value = ''
 })
